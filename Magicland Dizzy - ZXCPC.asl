@@ -1,9 +1,8 @@
 /*
     Autosplitter script for Magicland Dizzy ZX/CPC
-    Script version 1.0b1
-    Theoretically works with any emulator but tested with
-    Fuse 1.6.0
-    BizHawk 2.70
+    Script version 1.0b2
+    Theoretically works with any emulator but tested with Fuse 1.6.0
+    Currently having issues with Bizhawk
 */
 
 state("EmuHawk") { }
@@ -71,7 +70,7 @@ update
         {
             vars.watchers = new MemoryWatcherList
             {
-                new MemoryWatcher<byte>(new DeepPointer(vars.ramBank2 + 0x1D45)) { Name = "titleCheck" },
+                new MemoryWatcher<byte>(new DeepPointer(vars.ramBank2 + 0x1D46)) { Name = "titleCheck" },
                 new MemoryWatcher<byte>(new DeepPointer(vars.ramBank2 + 0x1D2A)) { Name = "diamondCount" },
                 new MemoryWatcher<byte>(new DeepPointer(vars.ramBank2 + 0x1D42)) { Name = "yolkfolkInTrouble" },
                 new MemoryWatcher<byte>(new DeepPointer(vars.ramBank2 + 0x1947)) { Name = "zaksDeath" },
