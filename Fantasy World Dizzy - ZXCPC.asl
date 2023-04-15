@@ -155,13 +155,13 @@ split
         return settings["BoulderBridge"];
     }
     
-    if (vars.watchers["openUpTheWell"].Old == 160 && vars.watchers["openUpTheWell"].Current == 144)
+    if (vars.watchers["openUpTheWell"].Changed && vars.watchers["openUpTheWell"].Current == 144)
     {
         print("Open up the Well");
         return settings["OpenUpTheWell"];
     }
     
-    if (vars.watchers["waterTheMagicPile"].Old == 1 && vars.watchers["waterTheMagicPile"].Current == 2)
+    if (vars.watchers["waterTheMagicPile"].Changed && vars.watchers["waterTheMagicPile"].Current == 2)
     {
         print("Water the Magic Pile");
         return settings["WaterTheMagicPile"];
